@@ -1,0 +1,60 @@
+package labtest1;
+
+import java.util.Scanner;
+
+public class question1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Scanner declaration to input
+	    Scanner sc = new Scanner(System.in);
+	    
+	    //Variable declaration
+	    int number, quanfirst, quansec, quanthird;
+	    double first,second,third,totfirst,totsec,totthird,total,newtotal,discount;
+	    
+	    System.out.println("Enter the number of items :");
+	    number=sc.nextInt();
+	    
+	    System.out.println("Enter price of first item :RM");
+	    first=sc.nextDouble();
+	    System.out.println("Enter quantity of first item :");
+	    quanfirst=sc.nextInt();
+	    
+	    System.out.println("Enter price of second item :RM");
+	    second=sc.nextDouble();
+	    System.out.println("Enter quantity of second item :");
+	    quansec=sc.nextInt();
+	    
+	    System.out.println("Enter price of third item :RM");
+	    third=sc.nextDouble();
+	    System.out.println("Enter quantity of third item :");
+	    quanthird=sc.nextInt();
+	    
+	    totfirst=first*quanfirst;
+	    totsec=second*quansec;
+	    totthird=third*quanthird;
+	    total=totfirst+totsec+totthird;
+	    
+	    if (total>=100)
+	    {
+	    	discount=total*0.2;
+	    	newtotal=total-discount;
+	    }
+	    else
+	    {
+	    	discount=total*0.1;
+	    	newtotal=total-discount;
+	    }
+	    
+	    System.out.printf("Total price :RM  %.2f ", total);
+		System.out.print("\n");
+		System.out.printf("Discount received :RM  %.2f ", discount);
+		System.out.print("\n");
+		System.out.printf("Price to be paid :RM  %.2f ", newtotal);
+		System.out.print("\n");
+	    
+
+	}
+
+}
