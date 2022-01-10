@@ -1,0 +1,49 @@
+package labtest1;
+
+import java.util.Scanner;
+
+public class question2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Scanner declaration to input
+	    Scanner sc = new Scanner(System.in);
+	    
+	    //Variable declaration
+	    int hour;
+	    double sales,commision=0,wages,hourworked;
+	    
+	    System.out.print("Enter sales :RM");
+	    sales=sc.nextDouble();
+	    
+	    if (sales>=150&&sales<=300)
+	    {
+	    	commision=sales*0.05;
+	    }
+	    if (sales>=301&&sales<=500)
+	    {
+	    	commision=sales*0.10;
+	    }
+	    if (sales>500)
+	    {
+	    	commision=sales*0.15;
+	    }
+	    
+	    System.out.print("Enter hours worked :");
+	    hour=sc.nextInt();
+	    hourworked=hour*5;
+	    
+	    wages=commision+hourworked;
+	    
+	    System.out.print("\n");
+	    System.out.printf("Commision :RM  %.2f ", commision);
+		System.out.print("\n");
+		System.out.printf("Daily wages :RM  %.2f ", wages);
+		System.out.print("\n");
+	    
+	    
+
+	}
+
+}
